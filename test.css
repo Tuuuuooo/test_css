@@ -1,0 +1,77 @@
+/* flexbox以外の装飾  */
+.main {
+    margin: 20px;
+    min-width: 350px;
+    height: 390px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 0px;
+    color: rgb(0, 0, 0);
+    border-radius: 0.5em;
+}
+.skil-name-title{
+    border-radius: 0.5em 0.5em 0em 0em;
+    background-color: rgba(255, 255, 128, .5);
+    padding: 2% 3% 0% 3%;
+    font-weight: bold;
+}
+.name {
+    font-size: 2rem;
+}
+.title {
+    font-size: 1rem;
+}
+.skil-detail{
+    font-size: 1rem;
+    padding: 5px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0em 0em 0.5em 0.5em;
+}
+.skil-detail-title{
+    font-weight: bold;
+}
+.effect{
+    width: 350px;
+}
+
+/* flexboxの設定 */
+/* flexboxの基本設定 */
+.flex-container {
+    display: flex;
+    flex-direction: row; /* デフォルト値 */
+    align-items: stretch; /* デフォルト値 */
+    justify-content: flex-start; /* デフォルト値 */
+    flex-wrap: nowrap; /* デフォルト値 */
+    align-content: strech; /* デフォルト値 */
+}
+.flex-item {
+    flex-grow: 0; /* デフォルト値 */
+    flex-shrink: 1; /* デフォルト値 */
+    flex-basis: auto; /* デフォルト値 */
+}
+
+/* flexboxで装飾する */
+.main {
+    flex-flow: column; /* 縦に並べる */
+}
+.skil-name-title {
+    align-items: baseline; /* 1知行目のテキストのベースラインで揃える */
+    justify-content: space-between; /* 均等間隔で配置する */
+}
+.card {
+    justify-content: center;
+    margin: auto;
+}
+.skil-detail{
+    flex-flow: column; /* 縦に並べる */
+    justify-content: space-between; /* 均等間隔で配置する */
+}
+.skil-detail-title{
+    flex: none;
+}
+.skil-detail-name{
+    flex: 1;
+}
+.effect{
+    flex-wrap: wrap;
+}
